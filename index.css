@@ -48,18 +48,26 @@ header.sticky {
 #menu-icon {
 	display: none;
 }
-header .logo {
+header img {
+	width: 15%;
+}
+/* header .logo {
 	font-size: 1rem;
 	font-weight: 500;
 	color: #000000;
 }
 header .logo span {
 	color: #0d67d1;
+} */
+header .navlinks {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
 }
 header .navlinks ul {
 	display: flex;
 	align-items: center;
-	gap: 1.5rem;
+	gap: 2rem;
 	list-style-type: none;
 }
 header .navlinks ul li a {
@@ -73,7 +81,7 @@ header .auth-btns {
 	gap: 1rem;
 }
 header .auth-btns .login-btn {
-	padding: 1rem;
+	padding: 0.7rem 1rem;
 	background: transparent;
 	outline: none;
 	border: none;
@@ -84,7 +92,7 @@ header .auth-btns .login-btn {
 	cursor: pointer;
 }
 header .auth-btns .signup-btn {
-	padding: 1rem;
+	padding: 0.7rem 1rem;
 	background: var(--accent);
 	outline: none;
 	border: none;
@@ -98,12 +106,12 @@ header .auth-btns .signup-btn {
 
 /* hero section */
 .hero {
-	padding: 5rem 5rem 1rem 4rem;
+	padding: 7rem 5rem 1rem 4rem;
 	background: url(/img/bg.png);
 	background-position: center;
 	background-size: cover;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	gap: 1rem;
 	justify-content: space-between;
 }
@@ -113,7 +121,7 @@ header .auth-btns .signup-btn {
 .hero .text-content {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 3rem;
 }
 .hero .text-content {
 	margin-top: 6rem;
@@ -170,7 +178,7 @@ header .auth-btns .signup-btn {
 	padding: 4rem 2rem;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 1.5rem;
 	background: #f6f7fd;
 	border-radius: 1rem;
@@ -200,6 +208,7 @@ header .auth-btns .signup-btn {
 	justify-content: center;
 	gap: 4rem;
 	font-family: var(--Montserrat);
+	margin-top: 2rem;
 }
 .numbers .text {
 	display: flex;
@@ -223,6 +232,7 @@ header .auth-btns .signup-btn {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	margin-top: 3rem;
 }
 .action {
 	display: grid;
@@ -240,7 +250,8 @@ header .auth-btns .signup-btn {
 	font-family: var(--mulish);
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	justify-content: center;
+	gap: 3rem;
 }
 .action .text h2 {
 	font-weight: 700;
@@ -275,6 +286,7 @@ header .auth-btns .signup-btn {
 .partners {
 	padding: 2rem 5rem;
 	font-family: var(--mulish);
+	margin-top: 4rem;
 }
 .partners .header {
 	text-align: center;
@@ -377,7 +389,7 @@ header .auth-btns .signup-btn {
 
 /* testimonials section */
 .testimonials {
-	margin-top: 2rem;
+	margin-top: 4rem;
 	padding: 2rem 5rem;
 }
 .testimonials .header {
@@ -441,6 +453,10 @@ header .auth-btns .signup-btn {
 /* footer */
 footer {
 	padding: 3rem;
+	margin-top: 4rem;
+}
+footer img {
+	width: 30%;
 }
 footer .top {
 	display: grid;
@@ -483,6 +499,9 @@ footer .bottom p {
 
 /* responsiveness */
 @media (max-width: 65em) {
+	header {
+		width: 90%;
+	}
 	.hero .text-content h1 {
 		font-size: 2rem;
 	}
@@ -501,23 +520,24 @@ footer .bottom p {
 	#menu-icon i.active:before {
 		content: '\f00d';
 	}
-	header {
-		width: 90%;
-	}
 	header .navlinks {
 		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 100px;
+		/* width: 100%; */
+		/* height: 100%; */
+		padding: 2rem;
+		top: 70px;
 		left: 0;
 		right: 0;
 		opacity: 0;
 		background-color: var(--white);
 		transition: all 300ms ease;
-		transform: translateY(-10px);
+		transform: translateY(-30px);
 		transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 		z-index: 10001;
 		border-radius: 0.5rem;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		display: flex;
+		flex-direction: column;
 	}
 	header .navlinks.active {
 		opacity: 1;
@@ -526,9 +546,8 @@ footer .bottom p {
 	header .navlinks ul {
 		display: flex;
 		flex-direction: column;
-		background: var(--white);
-		border-radius: 0.5rem;
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		/* background-color: var(--white);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); */
 	}
 	header .navlinks ul li a {
 		display: inline-block;
