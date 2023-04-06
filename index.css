@@ -520,6 +520,9 @@ footer .bottom p {
 	#menu-icon i.active:before {
 		content: '\f00d';
 	}
+	header img {
+		width: 20%;
+	}
 	header .navlinks {
 		position: fixed;
 		/* width: 100%; */
@@ -598,6 +601,9 @@ footer .bottom p {
 	}
 }
 @media (max-width: 30em) {
+	header img {
+		width: 35%;
+	}
 	.partners-grid-container {
 		grid-template-columns: repeat(2, 1fr);
 	}
